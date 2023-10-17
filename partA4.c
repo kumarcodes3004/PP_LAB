@@ -19,13 +19,7 @@ main(){
     double s=omp_get_wtime();
     // #pragma omp parallel for
     for(int i=2;i<n;i++){
-        printf("%d ",fibo(i));
-        // #pragma omp critical
-        // {
-        //     fib[i]=fib[i-1]+fib[i-2];
-        //     printf("%d ",fib[i]);
-        // }
-        
+        printf("%d ",fibo(i));    
     }
     double e=omp_get_wtime();
     printf("\n%lf",e-s);
